@@ -1,0 +1,23 @@
+{
+  "skill_name": "arxiv-search",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "搜一下昨天 5 月 20 号的 3D Gaussian Splatting 论文，把结果列个表格给我看看",
+      "expected_output": "搜索 2026-05-20 的 3D Gaussian Splatting 论文，返回论文列表表格，包含标题、arXiv 编号、日期、类别等信息",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Find arxiv papers about NeRF from May 15 to May 20 2026, output as JSON",
+      "expected_output": "搜索 2026-05-15 到 2026-05-20 的 NeRF 论文，输出 JSON 格式数据",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "帮我查一下 arxiv 上周有没有 diffusion model 相关的论文，大概 5 月 14 到 5 月 20 日",
+      "expected_output": "搜索 2026-05-14 到 2026-05-21 的 diffusion model 论文，返回论文列表",
+      "files": []
+    }
+  ]
+}
