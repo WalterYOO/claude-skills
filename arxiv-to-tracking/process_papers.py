@@ -56,7 +56,7 @@ def call_llm(api_url: str, api_key: str, model: str, paper: dict) -> dict | None
             "temperature": 0.3,
             "max_tokens": 32768,
         },
-        timeout=60,
+        timeout=3600,
     )
     resp.raise_for_status()
     raw = resp.json()["choices"][0]["message"]["content"].strip()
@@ -112,7 +112,7 @@ def main():
     parser.add_argument("--api-url", default=os.environ.get("PAPER_API_URL", ""), help="LLM API URL")
     parser.add_argument("--api-key", default=os.environ.get("PAPER_API_KEY", ""), help="API key")
     parser.add_argument("--model", default="Qwen3.6-27B-FP8", help="Model name")
-    parser.add_argument("--batch-size", type=int, default=5, help="Concurrent batch size")
+    parser.add_argument("--batch-size", type=int, default=32, help="Concurrent batch size")
     args = parser.parse_args()
 
     if not args.api_url:

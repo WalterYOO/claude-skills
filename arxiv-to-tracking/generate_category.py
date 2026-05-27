@@ -63,7 +63,7 @@ def call_llm_for_anchors(api_url: str, api_key: str, model: str, categories: lis
                 "temperature": 0.1,
                 "max_tokens": 32768,
             },
-            timeout=30,
+            timeout=3600,
         )
         resp.raise_for_status()
         raw = resp.json()["choices"][0]["message"]["content"].strip()
